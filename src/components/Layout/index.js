@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../Header'
-import Footer from '../Footer'
 import GlobalStyles from '../../styles/global'
 
 import * as S from './styled'

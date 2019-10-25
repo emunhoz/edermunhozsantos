@@ -1,8 +1,8 @@
 backend:
     name: github
-    repo: diogorodrigues/iceberg-gatsby-multilang
+    repo: emunhoz/edermunhozsantos
     branch: master
-    site_domain: https://iceberg-gatsby-multilang.netlify.com/
+    site_domain: https://edermunhozsantos.netlify.com/
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'

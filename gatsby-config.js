@@ -1,3 +1,9 @@
+const activeEnv =
+  process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development'
+require('dotenv').config({
+  path: `.env.${activeEnv}`
+})
+
 module.exports = {
   siteMetadata: {
     title: `Eder Munhoz Santos`,
@@ -100,6 +106,13 @@ module.exports = {
         theme_color: `#16202c`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: process.env.HOTJAR_ID,
+        sv: process.env.HOTJAR_SNIPPET_VERSION
       }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
