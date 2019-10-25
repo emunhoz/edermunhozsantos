@@ -1,0 +1,16 @@
+{
+  "menuItems": [
+    {
+      "name": "Início",
+      "link": "/"
+    },
+    {
+      "name": "Sobre",
+      "link": "/sobre"
+    },
+    {
+      "name": "Blog",
+      "link": "/blog"
+    }
+  ]
+}
