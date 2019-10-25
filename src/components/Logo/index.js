@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../images/avatar.jpeg'
+import logo from '../../images/avatar.jpg'
 import * as S from './styled'
 
 const Logo = () => {
