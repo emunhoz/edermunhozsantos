@@ -9,48 +9,50 @@ image: '/assets/img/06.jpg'
 
 ## Intro
 
-Existem várias maneiras pra estruturar projetos front ends e nenhuma delas é bala de prata.\
-A melhor estrutura é aquela onde fica claro sobre o que cada pasta faz e pra que serve cada arquivo. Precisa ser consistente a ponto de que novas pessoas na equipe possa entender facilmente e por fim todos que trabalham nela precisam sentir-se confortáveis com a estrutura.
+There are several ways to structure front end projects and none of them are silver.
 
-Subi no Github um [Boilerplate com React + Redux](https://github.com/emunhoz/react_boilerplate) que hoje faz muito sentido e sinto confortável para desenvolver.
+The best structure is where it is clear about each folder you make and what each file is for.
 
-## Sobre a stack que gosto
+It needs to be consistent to the point that new people on the team can easily and finally understand everyone who needs to be comfortable with the structure.
+
+I uploaded on Github a [Boilerplate with React + Redux](https://github.com/emunhoz/react_boilerplate) that today makes a lot of sense to me.
+
+## About my fav stack
 
 * React
-* Redux com Ducks pattern 🦆
+* Redux with Ducks pattern 🦆
 * Styled-components 💅
-* Axios para requisições
+* Axios
 
 
 
-## Sobre a estrutura
+## The structure
 
 **Components**
 
-Começando com a pasta `components`: Utilizo todos components stateless, ou seja, só recebem dados para montar a ui. Não existe lógica de negócio nesses arquivos e nem redux.
-
+Starting with the `components` folder: I use all stateless components, ie they only get data to assemble the user interface. There is no business logic in these files nor redux.
 
 
 **Containers**
 
-A pasta `containers` é onde fica a lógica principal com as regras de negócio. Ela também é responsável pelas requisições na API, redux (caso existir) e chama os componentes corretos para camada de visualização.
+The `containers` folder is where the main logic with business rules lies. It is also responsible for API requests, redux (if any) and calls the correct components for the view layer.
 
 **Pages**
 
-Ela é responsável por montar o template com todos os containers necessários para servir o arquivo de rota e apresentar a página final para o usuário. Não tem lógica, não tem redux. No máximo, um arquivo de estilo para organizar os containers/components na página.
+Responsible for assembling the template with all the containers needed to serve the route file and present the final page to the user. There is no logic, no redux. At most, one style file for organizing containers / components on the page.
 
 **Services**
 
-A pasta services fica responsável por organizar as requisições para API. Por exemplo: um arquivo `user.js` dentro desta pasta teria todas funções que envolve criação, atualização e excluir um usuário.
+The services folder is responsible for organizing API requests. For example, a `user.js` file within this folder would have all functions involving creating, updating, and deleting a user.
 
 **Store**
 
-Todo gerenciamento de estado da aplicação utilizando [_ducks pattern_](https://github.com/erikras/ducks-modular-redux)_._ A maneira enxuta de utilizar o ducks como pattern no redux facilita bastante construir módulos sem a necessidade de ficar criando vários e vários arquivos. A diferença dele para outras estruturas é a união de actions, reducers e types em um único arquivo e isso não significa que seus módulos vão ficar grandes, na maioria dos casos o módulos chegam ter no máximo 5 ou 6 actions.
+All application state management using [_ducks pattern_](https://github.com/erikras/ducks-modular-redux). The lean way of using ducks as a pattern in redux makes it much easier to build modules without having to. keep creating multiple and multiple files. Its difference with other structures is the union of actions, reducers and types in a single file and this does not mean that their modules will be large, in most cases the modules can have a maximum of 5 or 6 actions.
 
 **Styles**
 
-Onde fica o estilo geral da aplicação. Onde defini o [grid](https://edermunhozsantos.netlify.com/css-grid/) do layout, temas, fontes...
+Where is the general style of the application. Where I defined the [grid](https://edermunhozsantos.netlify.com/css-grid/) layout, themes, fonts ...
 
 **Utils**
 
-E por fim, a pasta utils são funções genéricas que podem ser reaproveitadas em toda a aplicação: pode ter funções que aplicam máscaras, parses...
+And finally, the utils folder are generic functions that can be reused throughout the application: it can have functions that apply masks, parses ...
