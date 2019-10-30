@@ -25,32 +25,31 @@ Subi no Github um [Boilerplate com React + Redux](https://github.com/emunhoz/rea
 
 ## Sobre a estrutura
 
-**Components**
+### Components
 
 Começando com a pasta `components`: Utilizo todos components stateless, ou seja, só recebem dados para montar a ui. Não existe lógica de negócio nesses arquivos e nem redux.
 
 
-
-**Containers**
+### Containers
 
 A pasta `containers` é onde fica a lógica principal com as regras de negócio. Ela também é responsável pelas requisições na API, redux (caso existir) e chama os componentes corretos para camada de visualização.
 
-**Pages**
+### Pages
 
 Ela é responsável por montar o template com todos os containers necessários para servir o arquivo de rota e apresentar a página final para o usuário. Não tem lógica, não tem redux. No máximo, um arquivo de estilo para organizar os containers/components na página.
 
-**Services**
+### Services
 
 A pasta services fica responsável por organizar as requisições para API. Por exemplo: um arquivo `user.js` dentro desta pasta teria todas funções que envolve criação, atualização e excluir um usuário.
 
-**Store**
+### Store
 
 Todo gerenciamento de estado da aplicação utilizando [_ducks pattern_](https://github.com/erikras/ducks-modular-redux)_._ A maneira enxuta de utilizar o ducks como pattern no redux facilita bastante construir módulos sem a necessidade de ficar criando vários e vários arquivos. A diferença dele para outras estruturas é a união de actions, reducers e types em um único arquivo e isso não significa que seus módulos vão ficar grandes, na maioria dos casos o módulos chegam ter no máximo 5 ou 6 actions.
 
-**Styles**
+### Styles
 
 Onde fica o estilo geral da aplicação. Onde defini o [grid](https://edermunhozsantos.netlify.com/css-grid/) do layout, temas, fontes...
 
-**Utils**
+### Utils
 
 E por fim, a pasta utils são funções genéricas que podem ser reaproveitadas em toda a aplicação: pode ter funções que aplicam máscaras, parses...
