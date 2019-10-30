@@ -181,6 +181,7 @@ export const Content = styled.section`
   ul,
   ol {
     padding-left: 30px;
+    margin-bottom: 3em;
 
     &:first-child {
       margin-top: 0;
@@ -400,7 +401,6 @@ export const Content = styled.section`
   }
 
   .highlight pre {
-    background-color: #f8f8f8;
     border: 1px solid #cccccc;
     font-size: 13px;
     line-height: 19px;
@@ -410,7 +410,6 @@ export const Content = styled.section`
   }
 
   pre {
-    background-color: #f8f8f8;
     border: 1px solid #cccccc;
     font-size: 13px;
     line-height: 19px;

@@ -40,7 +40,7 @@ Ok, isso é bem simples, mas não quero gravar minha sessão toda vez que abrir 
 
 Caso queria utilizar somente em produção você pode utilizar variáveis de ambiente com o [dotenv](https://www.npmjs.com/package/dotenv).
 
-**Instale a dependencia:**
+### Instale a dependencia:
 
 ```
 # with npm
@@ -50,7 +50,7 @@ npm install dotenv
 yarn add dotenv
 ```
 
-**Segundo**:
+### Segundo:
 
 Você pode criar dois arquivos na raiz do projeto: .env.dev e .env.prod
 
