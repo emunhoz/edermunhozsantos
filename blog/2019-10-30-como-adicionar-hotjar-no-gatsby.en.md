@@ -12,12 +12,13 @@ O [Hotjar](https://www.hotjar.com/) é simplesmente uma ferramenta de análise v
 
 ## Adicionando hotjar com Gatsby
 
-Gatsby possui plugins para várias ferramentas e para o hojtar existe o [\`gatsby-plugin-hotjar\`](https://www.gatsbyjs.org/packages/gatsby-plugin-hotjar/).
+Gatsby possui plugins para várias ferramentas e para o hojtar existe o [gatsby-plugin-hotjar](https://www.gatsbyjs.org/packages/gatsby-plugin-hotjar/).
 
 
 
 ```js
 // gatsby-config.js
+
   plugins: [
     {
       resolve: `gatsby-plugin-hotjar`,
@@ -37,30 +38,38 @@ Os dois campos necessários para adicionar pode ser achado muito fácil no seu d
 
 Ok, isso é bem simples, mas não quero gravar minha sessão toda vez que abrir o projeto localmente, certo?
 
-Caso queria utilizar somente em produção você pode utilizar variáveis de ambiente com o [\`dotenv\`](https://www.npmjs.com/package/dotenv).
+Caso queria utilizar somente em produção você pode utilizar variáveis de ambiente com o [dotenv](https://www.npmjs.com/package/dotenv).
 
 **Instale a dependencia:**
 
 ```
-# with npm npm install dotenv# or with Yarnyarn add dotenv
+# with npm
+npm install dotenv
+
+# or with Yarn
+yarn add dotenv
 ```
-
-
 
 **Segundo**:
 
-Você pode criar dois arquivos na raiz do projeto
-
-\- \`.env.dev\`
+Você pode criar dois arquivos na raiz do projeto: .env.dev e .env.prod
 
 ```
-// .env.devTEST=developmentHOTJAR_ID=XHOTJAR_SNIPPET_VERSION=6 
+// .env.dev
+
+TEST=development
+HOTJAR_ID=X
+HOTJAR_SNIPPET_VERSION=6 
 ```
 
-\- \`.env.prod\`
+
 
 ```
-// .env.prodTEST=productionHOTJAR_ID=1527515HOTJAR_SNIPPET_VERSION=6
+// .env.prod
+
+TEST=production
+HOTJAR_ID=1234567 => Por exemplo
+HOTJAR_SNIPPET_VERSION=6
 ```
 
 
