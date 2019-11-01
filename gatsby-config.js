@@ -108,13 +108,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`
       }
     },
-    {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        id: process.env.HOTJAR_ID,
-        sv: process.env.HOTJAR_SNIPPET_VERSION
-      }
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`
