@@ -7,19 +7,11 @@ page: true
 
 I was born in São Paulo and my first job was in 2008 as a designer (Yes, I started as a designer and you can view my portfolio if you want).
 
-
-
 I studied Marketing in Bauru (IESB-PREVE) in 2012 and I starting to work as a front end.
-
-
 
 I worked at companies like [UOL](https://www.uol.com.br/), [Yapay by Locaweb](https://www.yapay.com.br/) among others and I currently work at [Escale](https://escale.com.br/).
 
-
-
-In my free time, I enjoy playing the guitar, studying new technologies and playing video games.
-
-
+In my free time, I enjoy[ playing guitar](https://www.youtube.com/watch?v=73xqyuybYWc), studying new technologies and playing video games.
 
 Some of the latest advanced projects:
 
@@ -31,11 +23,7 @@ Some of the latest advanced projects:
 
 [Not-slack](https://emunhoz-not-slack.netlify.com) - Interface for chat app (React, Redux, SCSS)
 
-
-
-## WORK EXPERIENCE
-
-
+## Work experience
 
 ### FRONT END ENGINEER @ ESCALE - Mar 2019 - Current
 
