@@ -5,7 +5,7 @@ page: true
 ---
 ## A quick introduction
 
-I was born in São Paulo and my first job was in 2008 as a designer (Yes, I started as a designer and you can view my portfolio if you want).
+I was born in Barra Bonita, São Paulo and my first job was in 2008 as a designer (Yes, I started as a designer and you can view my portfolio if you want).
 
 I studied Marketing in Bauru (IESB-PREVE) in 2012 and I starting to work as a front end.
 
