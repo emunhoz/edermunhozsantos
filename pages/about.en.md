@@ -3,7 +3,39 @@ title: About
 date: 2019-10-20T01:21:23.000Z
 page: true
 ---
+## A quick introduction
+
+I was born in São Paulo and my first job was in 2008 as a designer (Yes, I started as a designer and you can view my portfolio if you want).
+
+
+
+I studied Marketing in Bauru (IESB-PREVE) in 2012 and I starting to work as a front end.
+
+
+
+I worked at companies like [UOL](https://www.uol.com.br/), [Yapay by Locaweb](https://www.yapay.com.br/) among others and I currently work at [Escale](https://escale.com.br/).
+
+
+
+In my free time, I enjoy playing the guitar, studying new technologies and playing video games.
+
+
+
+Some of the latest advanced projects:
+
+[React Boilerplate + Redux](https://emunhoz-react-boilerplate.netlify.com/) - A simple boilerplate to start new projects (React, Redux, styled-components)
+
+[Greenthumb](https://emunhoz-greenthumb.netlify.com/) - App to order a plant (React, Redux, styled-components, Cypress)
+
+[Blog Page](https://prismic-starter-template.netlify.com/) - A starter blog template (Gatsby, GraphQL, Prismic Headless CMS, styled-components)
+
+[Not-slack](https://emunhoz-not-slack.netlify.com) - Interface for chat app (React, Redux, SCSS)
+
+
+
 ## WORK EXPERIENCE
+
+
 
 ### FRONT END ENGINEER @ ESCALE - Mar 2019 - Current
 
