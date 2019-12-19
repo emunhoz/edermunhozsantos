@@ -3,25 +3,15 @@ title: Sobre
 date: 2019-10-20T01:21:23.000Z
 page: true
 ---
-# EXPERIÊNCIAS
-
-## Uma rápida introdução sobre mim
+## Uma rápida introdução
 
 Nasci no interior do estado de São Paulo e meu primeiro trabalho foi em 2008 como designer (Sim, comecei como designer e você pode [visualizar meu portifólio](https://www.behance.net/edermunhoz1384) se quiser).
 
-
-
 Estudei Marketing em Bauru (IESB-PREVE) em 2012 e estava começando trabalhar como front end.
 
-
-
-Trabalhei em empresas como UOL, Yapay by Locaweb entre outras e atualmente trabalho na Escale.
-
-
+Trabalhei em empresas como [UOL](https://www.uol.com.br/), [Yapay by Locaweb](https://www.yapay.com.br/) entre outras e atualmente trabalho na [Escale](https://escale.com.br/).
 
 No meu tempo livre gosto de tocar guitarra, estudar novas tecnologias e jogar video-game.
-
-
 
 Alguns dos últimos projetos desenvolvidos:
 
@@ -31,6 +21,8 @@ Alguns dos últimos projetos desenvolvidos:
 * [Not-slack](https://emunhoz-not-slack.netlify.com/) - Interface para aplicativo de comunicação (React, Redux, SCSS)
 
 
+
+## Experiências
 
 ### FRONT END ENGINEER @ ESCALE - Mar 2019 - Atual
 
@@ -50,7 +42,7 @@ Desenvolvimento de interfaces para aplicações internas e websites utilizando H
 
 ### DESIGNER @ MSTECH - Mai 2013 - Out 2014
 
-Desenvolvimente de interface e layouts utilizando HTML, CSS, produção de conteúdo para web (aulas, cursos e treinamentos a distancia), identidade visuais, desenvolvimento de interface para apps, materiais impressos.
+Desenvolvimento de interface e layouts utilizando HTML, CSS, produção de conteúdo para web (aulas, cursos e treinamentos a distancia), identidade visuais, desenvolvimento de interface para apps, materiais impressos.
 
 ### DESIGNER @ SOLIDUM EDITORA - Jul 2008 - Jun 2013
 
