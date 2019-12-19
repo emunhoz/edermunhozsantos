@@ -11,7 +11,7 @@ Estudei Marketing em Bauru (IESB-PREVE) em 2012 e estava começando trabalhar co
 
 Trabalhei em empresas como [UOL](https://www.uol.com.br/), [Yapay by Locaweb](https://www.yapay.com.br/) entre outras e atualmente trabalho na [Escale](https://escale.com.br/).
 
-No meu tempo livre gosto de tocar guitarra, estudar novas tecnologias e jogar video-game.
+No meu tempo livre gosto de [tocar guitarra](https://www.youtube.com/watch?v=73xqyuybYWc), estudar novas tecnologias e jogar video-game.
 
 Alguns dos últimos projetos desenvolvidos:
 
@@ -19,8 +19,6 @@ Alguns dos últimos projetos desenvolvidos:
 * [Greenthumb](https://emunhoz-greenthumb.netlify.com/) - Aplicativo para encomendar uma planta (React, Redux, styled-components, Cypress)
 * [Blog Page](https://prismic-starter-template.netlify.com/) - Gatsby, GraphQL, Prismic Headless CMS, styled-components
 * [Not-slack](https://emunhoz-not-slack.netlify.com/) - Interface para aplicativo de comunicação (React, Redux, SCSS)
-
-
 
 ## Experiências
 
