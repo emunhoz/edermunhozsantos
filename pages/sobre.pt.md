@@ -5,7 +5,7 @@ page: true
 ---
 ## Uma rápida introdução
 
-Nasci no interior do estado de São Paulo e meu primeiro trabalho foi em 2008 como designer (Sim, comecei como designer e você pode [visualizar meu portifólio](https://www.behance.net/edermunhoz1384) se quiser).
+Nasci em Barra Bonita - SP e meu primeiro trabalho foi em 2008 como designer (Sim, comecei como designer e você pode [visualizar meu portifólio](https://www.behance.net/edermunhoz1384) se quiser).
 
 Estudei Marketing em Bauru (IESB-PREVE) em 2012 e estava começando trabalhar como front end.
 
