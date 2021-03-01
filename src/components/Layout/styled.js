@@ -9,16 +9,17 @@ export const Wrapper = styled.div`
 
 export const SiteContent = styled.section`
   display: flex;
-  flex: 1;
-  width: 100%;
 `;
 
 export const Container = styled.div`
   width: 100%;
   max-width: var(--width-container);
   margin: 0 auto;
-  padding: calc(var(--space) * 1.3) var(--space);
-  ${media.greaterThan('large')`
-    padding: calc(var(--space)*1.3) var(--space-sm);
+  padding: 0 var(--space);
+  ${media.lessThan('medium')`
+    padding: calc(var(--space) * 3.3) var(--space);
+  `}
+  ${media.greaterThan('medium')`
+    padding: calc(var(--space) * 10.3) var(--space-sm);
   `}
 `;

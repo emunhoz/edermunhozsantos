@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-dark-mode`,
     // It needs to be the first one to work with gatsby-remark-images
     {
       resolve: `gatsby-source-filesystem`,
@@ -98,18 +99,6 @@ module.exports = {
         ]
       }
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`300`, `400`, `600`, `700`]
-          }
-        ]
-      }
-    },
-
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
@@ -121,7 +110,10 @@ module.exports = {
         background_color: `#16202c`,
         theme_color: `#16202c`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`
+        icon: `src/images/gatsby-icon.png`,
+        icon_options: {
+          purpose: `any maskable`
+        }
       }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

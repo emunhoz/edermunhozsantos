@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import TitlePage from '../components/TitlePage'
 import DescriptionPage from '../components/DescriptionPage'
 import SEO from '../components/seo'
@@ -7,6 +7,7 @@ import SEO from '../components/seo'
 import * as S from '../components/Content/styled'
 
 import { PostDate } from '../styles/base'
+import { ArrowBack } from 'styled-icons/boxicons-regular/ArrowBack'
 
 const Post = props => {
   const post = props.data.markdownRemark
@@ -18,6 +19,7 @@ const Post = props => {
         description={post.frontmatter.description}
         image={post.frontmatter.image}
       />
+      <Link to="/"><ArrowBack size="34" /></Link>
       <PostDate>
         {post.frontmatter.date} • {post.timeToRead} min de leitura
       </PostDate>

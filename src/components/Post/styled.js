@@ -6,11 +6,7 @@ export const Post = styled.article``;
 export const PostTitle = styled.h1`
   font-size: 4rem;
   font-weight: normal;
-
-  ${media.lessThan('large')`
-    font-size: 2.8rem;
-    line-height: 1.1;
-  `}
+  font-size: 2.2rem;
 `;
 
 export const MainContent = styled.section`

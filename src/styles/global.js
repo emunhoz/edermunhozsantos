@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    font-weight: 300;
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
@@ -57,11 +58,11 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.9;
     font-weight: 400;
     font-size: 2.4rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,Avenir,Avenir Next,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
     
     height: 100%;
     background: var(--body-bg);
-    --gray-extra-light: #eaeaea; 
+    --gray-extra-light: #e6e6e6; 
     --gray-light: #747d8d;  
     --gray: #475060;
     --gray-dark: #2e333e;
@@ -73,16 +74,18 @@ const GlobalStyles = createGlobalStyle`
     --body-bg: #FFFFFF;
     color: #333;
     --bg-light: var(--gray-extra-light);
-    @media screen and (prefers-color-scheme: dark) {
-      background: #1e272f;
-      color: #9ed4ff;
-      --bg-light: #27343e;
-      --text-color-normal: hsl(206, 40%, 66%);
-      --text-color-light: hsl(210, 15%, 35%);
-      --text-color-richer: hsl(210, 50%, 72%);
-      --text-color-highlight: hsl(199, 100%, 50%);
-    }
   }
+
+  body.dark {
+    background: #1e272f;
+    color: #9ed4ff;
+    --bg-light: #27343e;
+    --text-color-normal: hsl(206, 40%, 66%);
+    --text-color-light: hsl(210, 15%, 35%);
+    --text-color-richer: hsl(210, 50%, 72%);
+    --text-color-highlight: hsl(199, 100%, 50%);
+  }
+
   img {
     display: block;
   	max-width: 100%;

@@ -22,7 +22,7 @@ export const Container = styled.div`
   height: 100%;
   align-items: center;
   padding: 0 var(--space);
-  justify-content: space-between;
+  justify-content: flex-end;
 `
 
 export const Menu = styled.div`

@@ -1,28 +1,19 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 import Img from 'gatsby-image'
 import LocalizedLink from '../LocalizedLink'
 
 export const PostItemLink = styled(LocalizedLink)`
   text-decoration: none;
-  display: block;
   margin-bottom: var(--space);
   transition: all 0.2s ease;
-  ${media.greaterThan('small')`
-    margin-bottom: 0;
-  `}
-  &:hover {
-    transform: translateY(-4px);
-  }
-`
+  display: block;
+  margin-bottom: 3em;
 
-export const PostItemWrapper = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-light);
+  :hover {
+    h2 {
+      text-decoration: underline;
+    }
+  }
 `
 
 export const PostItemImg = styled(Img)`
@@ -37,32 +28,32 @@ export const PostItemInfo = styled.div`
 `
 
 export const PostItemTag = styled.span`
-  color: var(--text-color-highlight);
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: fit-content;
+  background: var(--bg-light);
+  display: inline-flex;
+  font-size: 1.6rem;
   margin-bottom: var(--space-sm);
-  display: flex;
+  padding: 0 1rem;
+  height: 2.5rem;
+  margin: .2rem;
+  border-radius: 1.2rem;
   align-items: center;
-  svg {
-    width: 18px;
-    margin-right: 6px;
-  }
 `
 
 export const PostItemDate = styled.time`
-  font-size: 1.4rem;
-  margin-bottom: var(--space-sm);
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 10px;
 `
 
-export const PostItemTitle = styled.h1`
-  font-size: 2.9rem;
+export const PostItemTitle = styled.h2`
+  font-size: 3.5rem;
   font-weight: 700;
-  line-height: 140%;
-  margin-bottom: var(--space-sm);
+  line-height: 44px;
+  margin-bottom: 10px;
 `
 
 export const PostItemDescription = styled.p`
-  margin-top: var(--space-sm);
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 32px;
 `

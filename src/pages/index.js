@@ -20,11 +20,6 @@ const Index = ({ data: { allMarkdownRemark } }) => {
     <div className='homepage'>
       <SEO title='Home' />
       <Profile />
-      <h2>
-        <strong>{latestPosts}</strong>
-      </h2>
-
-      <br />
 
       <S.ListWrapper>
         {postList.map(
@@ -43,6 +38,7 @@ const Index = ({ data: { allMarkdownRemark } }) => {
             }
           }) => (
             <PostItem
+              key={title}
               slug={`/blog/${slug}`}
               background={background}
               category={category}

@@ -2,24 +2,24 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const MenuWrapper = styled.div`
-  margin-bottom: 60px;
+  margin-bottom: calc(var(--space) * 5.5);
   ${media.greaterThan('medium')`
     display: flex;
+    align-items: center;
   `}
 `
 
 export const LogoLink = styled.div`
   display: inline-block;
-  margin: 0 40px 20px 0;
-  max-width: 160px;
+  max-width: 150px;
   width: 100%;
+  margin-right: 40px;
 `
 
 export const TitleElement = styled.h1`
   line-height: 140%;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: var(--space-sm);
 
   ${media.greaterThan('medium')`
     line-height: 1.1;
@@ -34,7 +34,6 @@ export const TitleElement = styled.h1`
 
 export const FindMe = styled.ul`
   list-style: none;
-  margin-top: 22px;
 `
 
 export const SocialLink = styled.li`
@@ -52,6 +51,12 @@ export const Link = styled.a`
   }
 
   svg {
-    width: 44px;
+    width: 24px;
   }
+`
+
+export const Description = styled.p`
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 32px;
 `

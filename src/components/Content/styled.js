@@ -117,7 +117,7 @@ export const Content = styled.section`
     line-height: 1.9;
     margin: 0px auto 3em;
     font-size: 2.4rem;
-    font-weight: 100;
+    font-weight: 300;
 
     strong {
       font-weight: bold;

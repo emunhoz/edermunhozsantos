@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
 import useTranslations from '../useTranslations'
-import { Label } from 'styled-icons/boxicons-solid/Label'
 
 import * as S from './styled'
 
@@ -13,25 +11,16 @@ const PostItem = ({
   date,
   timeToRead,
   title,
-  description,
-  image
+  description
 }) => {
   const { toRead } = useTranslations()
 
   return (
     <S.PostItemLink to={slug}>
-      <S.PostItemWrapper>
-        <S.PostItemInfo>
-          <S.PostItemTag background={background}>
-            <Label /> {category}
-          </S.PostItemTag>
-          <S.PostItemDate>
-            {date} • {timeToRead} min {toRead}
-          </S.PostItemDate>
-          <S.PostItemTitle>{title}</S.PostItemTitle>
-          <S.PostItemDescription>{description}</S.PostItemDescription>
-        </S.PostItemInfo>
-      </S.PostItemWrapper>
+      <S.PostItemTitle>{title}</S.PostItemTitle>
+      <S.PostItemDate>{date} • ☕️  {timeToRead} min {toRead}</S.PostItemDate>
+      <S.PostItemTag background={background}>{category}</S.PostItemTag>
+      <S.PostItemDescription>{description}</S.PostItemDescription>
     </S.PostItemLink>
   )
 }

@@ -1,10 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import PostItem from '../components/PostItem'
 import TitlePage from '../components/TitlePage'
 import SEO from '../components/seo'
 
 import Pagination from '../components/Pagination'
+
+import { ArrowBack } from 'styled-icons/boxicons-regular/ArrowBack'
 
 import * as S from '../components/ListWrapper/styled'
 
@@ -21,7 +23,7 @@ const Blog = props => {
   return (
     <>
       <SEO title='Blog' />
-      <TitlePage text='Blog' />
+      <Link to="/"><ArrowBack size="34" /></Link>
 
       <S.ListWrapper>
         {postList.map(

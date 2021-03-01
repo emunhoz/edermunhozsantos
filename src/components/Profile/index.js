@@ -1,8 +1,7 @@
 import React from 'react'
 import useTranslations from '../useTranslations'
 import Logo from '../Logo'
-import { Github } from 'styled-icons/boxicons-logos/Github'
-import { LinkedinSquare } from 'styled-icons/boxicons-logos/LinkedinSquare'
+import { Github, LinkedinSquare, Twitter } from 'styled-icons/boxicons-logos'
 import * as S from './styled'
 
 export const Profile = () => {
@@ -13,10 +12,8 @@ export const Profile = () => {
       <S.LogoLink to='/' title={home} aria-label={home}>
         <Logo />
       </S.LogoLink>
-
       <div>
         <S.TitleElement>{hello}</S.TitleElement>
-        <p>{subline}</p>
         <S.FindMe>
           <S.SocialLink>
             <S.Link href='https://github.com/emunhoz' aria-label='Github'>
@@ -32,7 +29,17 @@ export const Profile = () => {
               <LinkedinSquare />
             </S.Link>
           </S.SocialLink>
+          <S.SocialLink>
+            <S.Link
+              color='#0077b5'
+              href='https://twitter.com/munhoz_eder'
+              aria-label='Twitter'
+            >
+              <Twitter />
+            </S.Link>
+          </S.SocialLink>
         </S.FindMe>
+        <S.Description>{subline}</S.Description>
       </div>
     </S.MenuWrapper>
   )

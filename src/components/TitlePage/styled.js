@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const TitleElement = styled.h1`
-  line-height: 140%;
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: var(--space-sm);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 44px;
+  margin-bottom: 10px;
 
   ${media.greaterThan('medium')`
     line-height: 1.1;
@@ -13,7 +13,9 @@ export const TitleElement = styled.h1`
   `}
 
   ${media.greaterThan('large')`
-    line-height: 1.1;
-    font-size: 6rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 44px;
+    margin-bottom: 10px;
   `}
 `
