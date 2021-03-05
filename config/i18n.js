@@ -18,6 +18,6 @@ module.exports = {
     siteLanguage: `pt`,
     ogLanguage: `pt_BR`,
     defaultTitle: `Eder Munhoz Santos`,
-    defaultDescription: `Um blog sobre conteúdo pessoais e experiências front end`
+    defaultDescription: `Um blog sobre conteúdo pessoal e experiências front end`
   }
 }

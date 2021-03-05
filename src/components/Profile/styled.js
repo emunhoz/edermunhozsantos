@@ -20,6 +20,7 @@ export const TitleElement = styled.h1`
   line-height: 140%;
   font-size: 3rem;
   font-weight: bold;
+  margin-bottom: 10px;
 
   ${media.greaterThan('medium')`
     line-height: 1.1;
@@ -33,6 +34,7 @@ export const TitleElement = styled.h1`
 `
 
 export const FindMe = styled.ul`
+  margin-bottom: 10px;
   list-style: none;
 `
 
@@ -56,7 +58,5 @@ export const Link = styled.a`
 `
 
 export const Description = styled.p`
-  font-size: 2.2rem;
-  font-weight: 300;
   line-height: 32px;
 `

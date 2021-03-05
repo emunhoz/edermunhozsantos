@@ -42,18 +42,15 @@ export const PostItemTag = styled.span`
 export const PostItemDate = styled.time`
   font-size: 1.8rem;
   display: block;
-  margin-bottom: 10px;
 `
 
 export const PostItemTitle = styled.h2`
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 44px;
-  margin-bottom: 10px;
 `
 
 export const PostItemDescription = styled.p`
-  font-size: 2.2rem;
   font-weight: 300;
   line-height: 32px;
 `

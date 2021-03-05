@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import PostItem from '../components/PostItem'
 import TitlePage from '../components/TitlePage'
 import SEO from '../components/seo'
+import useTranslations from '../components/useTranslations'
 
 import Pagination from '../components/Pagination'
 
@@ -12,6 +13,7 @@ import * as S from '../components/ListWrapper/styled'
 
 const Blog = props => {
   const postList = props.data.allMarkdownRemark.edges
+  const { allPosts } = useTranslations()
 
   // Logic for Pagination Component
   const { currentPage, numPages } = props.pageContext
@@ -23,7 +25,8 @@ const Blog = props => {
   return (
     <>
       <SEO title='Blog' />
-      <Link to="/"><ArrowBack size="34" /></Link>
+      <TitlePage>{allPosts}</TitlePage>
+      <Link to="/" style={{ marginBottom: '40px', display: 'block' }}><ArrowBack size="34" /></Link>
 
       <S.ListWrapper>
         {postList.map(
@@ -42,6 +45,7 @@ const Blog = props => {
             }
           }) => (
             <PostItem
+              key={title}
               slug={`/blog/${slug}`}
               background={background}
               category={category}

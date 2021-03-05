@@ -8,6 +8,7 @@ import * as S from './styled'
 const Header = () => (
   <S.HeaderWrapper>
     <S.Container>
+      {/* <Languages /> */}
       <ToggleThemeSite />
     </S.Container>
   </S.HeaderWrapper>
