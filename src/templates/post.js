@@ -19,7 +19,7 @@ const Post = props => {
         description={post.frontmatter.description}
         image={post.frontmatter.image}
       />
-      <Link to="/" styles={{ marginBottom: '40px', display: 'block' }}><ArrowBack size="34" /></Link>
+      <Link to="/" css={{ marginBottom: '40px', display: 'block' }}><ArrowBack size="34" /></Link>
       <PostDate>
         {post.frontmatter.date} • {post.timeToRead} min de leitura
       </PostDate>

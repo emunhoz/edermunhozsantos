@@ -9,10 +9,7 @@ export const Profile = () => {
 
   return (
     <S.MenuWrapper>
-      <S.LogoLink to='/' title={home} aria-label={home}>
-        <Logo />
-      </S.LogoLink>
-      <div>
+      <S.ProfileWrapper>
         <S.TitleElement>{hello}</S.TitleElement>
         <S.FindMe>
           <S.SocialLink>
@@ -40,7 +37,10 @@ export const Profile = () => {
           </S.SocialLink>
         </S.FindMe>
         <S.Description>{subline}</S.Description>
-      </div>
+      </S.ProfileWrapper>
+      <S.LogoLink to='/' title={home} aria-label={home}>
+        <Logo />
+      </S.LogoLink>
     </S.MenuWrapper>
   )
 }

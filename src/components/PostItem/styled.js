@@ -36,7 +36,7 @@ export const PostItemTag = styled.span`
   height: 2.5rem;
   margin: .2rem;
   border-radius: 1.2rem;
-  align-items: center;
+  align-items: flex-end;
 `
 
 export const PostItemDate = styled.time`

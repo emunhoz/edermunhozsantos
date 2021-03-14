@@ -2,10 +2,23 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const MenuWrapper = styled.div`
-  margin-bottom: calc(var(--space) * 5.5);
+  display: flex;
+  flex-flow: column;
+  margin-bottom: calc(var(--space) * 6);
   ${media.greaterThan('medium')`
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-flow: inherit;
+    margin-bottom: calc(var(--space) * 10);
+  `}
+`
+
+export const ProfileWrapper = styled.div`
+  ${media.lessThan('medium')`
+    display: flex;
+    order: 2;
+    flex-flow: column;
   `}
 `
 
@@ -13,7 +26,11 @@ export const LogoLink = styled.div`
   display: inline-block;
   max-width: 150px;
   width: 100%;
-  margin-right: 40px;
+  margin-bottom: 30px;
+
+  ${media.greaterThan('medium')`
+    margin-bottom: 0;
+  `}
 `
 
 export const TitleElement = styled.h1`
