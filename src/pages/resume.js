@@ -37,13 +37,13 @@ export const S = {
     Email: styled.div`
         font-size: 20px;
     `,
-    AboutMe: styled.div`
+    AboutMe: styled.section`
         margin-bottom: 40px;
     `,
     AboutMeAge: styled.div`
         font-size: 18px;
     `,
-    MoreAboutMe: styled.div`
+    MoreAboutMe: styled.section`
         margin-bottom: 40px;
     `,
     MoreAboutMeDescription: styled.p`
@@ -55,7 +55,7 @@ export const S = {
         margin: 0;
         margin-bottom: 40px;
     `,
-    Experiences: styled.div``,
+    Experiences: styled.section``,
     Experience: styled.div`
         line-height: 32px;
         margin-bottom: 30px;
@@ -109,7 +109,7 @@ export const S = {
         font-size: 18px;
     `,
     LatestProjectTechnologies: styled.div``,
-    Contact: styled.div`
+    Contact: styled.section`
         margin-bottom: 60px;
     `,
     ContactDetail: styled.div`
@@ -130,6 +130,15 @@ export const S = {
         font-size: 18px;
     `,
     ComplementaryEducation: styled.section`
+        margin-bottom: 40px;
+    `,
+    WorkExpirence: styled.section`
+        margin-bottom: 40px;
+    `,
+    SideProjects: styled.section`
+        margin-bottom: 40px;
+    `,
+    Languages: styled.section`
         margin-bottom: 40px;
     `,
     Timeline: styled.div`
@@ -492,16 +501,15 @@ const Resume = () => {
                 <S.MoreAboutMeDescription>
                     In the last times I've been working in a new products from
                     statch, using some interface editor (Figma, AdobeXD) to
-                    setup all components, design-tokens and pages. Check this
-                    out{' '}
+                    setup all components, design-tokens and pages. Check out{' '}
                     <a href='https://www.behance.net/edermunhoz1384'>
                         my personal portifolio
                     </a>
                     .
                 </S.MoreAboutMeDescription>
                 <S.MoreAboutMeDescription>
-                    Then, I start build the front end application using the best
-                    of technologies for the product context. Check this out{' '}
+                    Then, I start building the front end application using the
+                    best of technologies for the product context. Check out{' '}
                     <a href='#last-side-projects'>
                         my last side projects as Front end engineer
                     </a>
@@ -561,8 +569,20 @@ const Resume = () => {
                 </div>
             </S.Education>
 
+            <S.Languages>
+                <S.SubTitle>Languages</S.SubTitle>
+                <div>
+                    <S.EducationCourseName>Portuguese</S.EducationCourseName>
+                    <S.EducationSchoolName>Native</S.EducationSchoolName>
+                </div>
+                <div>
+                    <S.EducationCourseName>English</S.EducationCourseName>
+                    <S.EducationSchoolName>Intermediary</S.EducationSchoolName>
+                </div>
+            </S.Languages>
+
             <S.ComplementaryEducation>
-                <S.SubTitle>Complementary courses:</S.SubTitle>
+                <S.SubTitle>Complementary courses</S.SubTitle>
                 <div>
                     <S.EducationDate>2021 - Present</S.EducationDate>
                     <S.EducationCourseName>
@@ -592,126 +612,93 @@ const Resume = () => {
                 </div>
             </S.ComplementaryEducation>
 
-            <S.SubTitle>Experiences</S.SubTitle>
+            <S.WorkExpirence>
+                <S.SubTitle>Experiences</S.SubTitle>
 
-            <S.Timeline>
-                <ul className='timeline'>
-                    {experiences.map(
-                        (
-                            {
-                                company,
-                                occupation,
-                                time,
-                                technologies,
-                                description,
-                            },
-                            key
-                        ) => (
-                            <li className='timeline-event' key={key}>
-                                <label className='timeline-event-icon'></label>
-                                <div className='timeline-event-copy'>
-                                    <p className='timeline-event-thumbnail'>
-                                        {time}
-                                    </p>
-                                    <S.Company>{company}</S.Company>
-                                    <S.CompanyOccupation>
-                                        {occupation}
-                                    </S.CompanyOccupation>
-                                    <div style={{ marginBottom: '20px' }}>
-                                        {technologies.map((item, key) => (
-                                            <S.PostItemTag key={key}>
-                                                {item}
-                                            </S.PostItemTag>
-                                        ))}
+                <S.Timeline>
+                    <ul className='timeline'>
+                        {experiences.map(
+                            (
+                                {
+                                    company,
+                                    occupation,
+                                    time,
+                                    technologies,
+                                    description,
+                                },
+                                key
+                            ) => (
+                                <li className='timeline-event' key={key}>
+                                    <label className='timeline-event-icon'></label>
+                                    <div className='timeline-event-copy'>
+                                        <p className='timeline-event-thumbnail'>
+                                            {time}
+                                        </p>
+                                        <S.Company>{company}</S.Company>
+                                        <S.CompanyOccupation>
+                                            {occupation}
+                                        </S.CompanyOccupation>
+                                        <div style={{ marginBottom: '20px' }}>
+                                            {technologies.map((item, key) => (
+                                                <S.PostItemTag key={key}>
+                                                    {item}
+                                                </S.PostItemTag>
+                                            ))}
+                                        </div>
+                                        <S.DescriptionJobs>
+                                            {description.map((item, key) => (
+                                                <li key={key}>{item}</li>
+                                            ))}
+                                        </S.DescriptionJobs>
                                     </div>
-                                    <S.DescriptionJobs>
-                                        {description.map((item, key) => (
-                                            <li key={key}>{item}</li>
-                                        ))}
-                                    </S.DescriptionJobs>
-                                </div>
-                            </li>
+                                </li>
+                            )
+                        )}
+                    </ul>
+                </S.Timeline>
+            </S.WorkExpirence>
+
+            <S.SideProjects>
+                <S.SubTitle id='last-side-projects'>
+                    Last side projects
+                </S.SubTitle>
+
+                <S.LatestProjectWrapper>
+                    {sideProjects.map(
+                        ({ name, year, link, technologies }, key) => (
+                            <S.LatestProject key={key}>
+                                <S.DateTime>{year}</S.DateTime>
+                                <S.LatestProjectName>
+                                    {name}
+                                </S.LatestProjectName>
+                                <S.LatestProjectPreview>
+                                    Preview:{' '}
+                                    <a href={link.production}>
+                                        {link.production}
+                                    </a>
+                                </S.LatestProjectPreview>
+                                {link.figma && (
+                                    <S.LatestProjectPreview>
+                                        Figma interface:{' '}
+                                        <a href={link.figma}>{link.figma}</a>
+                                    </S.LatestProjectPreview>
+                                )}
+                                <S.LatestProjectPreview>
+                                    Github source:{' '}
+                                    <a href={link.github}>{link.github}</a>
+                                </S.LatestProjectPreview>
+                                <S.LatestProjectTechnologies>
+                                    {technologies.map((item, key) => (
+                                        <S.PostItemTag key={key}>
+                                            {item}
+                                        </S.PostItemTag>
+                                    ))}
+                                </S.LatestProjectTechnologies>
+                            </S.LatestProject>
                         )
                     )}
-                </ul>
-            </S.Timeline>
-
-            <S.SubTitle id='last-side-projects'>Last side projects</S.SubTitle>
-
-            <S.LatestProjectWrapper>
-                {sideProjects.map(({ name, year, link, technologies }, key) => (
-                    <S.LatestProject key={key}>
-                        <S.DateTime>{year}</S.DateTime>
-                        <S.LatestProjectName>{name}</S.LatestProjectName>
-                        <S.LatestProjectPreview>
-                            Preview:{' '}
-                            <a href={link.production}>{link.production}</a>
-                        </S.LatestProjectPreview>
-                        {link.figma && (
-                            <S.LatestProjectPreview>
-                                Figma interface:{' '}
-                                <a href={link.figma}>{link.figma}</a>
-                            </S.LatestProjectPreview>
-                        )}
-                        <S.LatestProjectPreview>
-                            Github source:{' '}
-                            <a href={link.github}>{link.github}</a>
-                        </S.LatestProjectPreview>
-                        <S.LatestProjectTechnologies>
-                            {technologies.map((item, key) => (
-                                <S.PostItemTag key={key}>{item}</S.PostItemTag>
-                            ))}
-                        </S.LatestProjectTechnologies>
-                    </S.LatestProject>
-                ))}
-            </S.LatestProjectWrapper>
-
-            {/* <S.SubTitle>Education and certifications</S.SubTitle>
-
-            <S.Experiences>
-                <S.Experience>
-                    <S.Company>Degree in Marketing</S.Company>
-                    <S.CompanyOccupation>
-                        IESB PREVE - Bauru, São Paulo - Brazil
-                    </S.CompanyOccupation>
-                    <S.CompanyTime>Jan 2010 - Jan 2012</S.CompanyTime>
-                </S.Experience>
-                <S.Experience>
-                    <S.Company>Front end apps</S.Company>
-                    <S.CompanyOccupation>
-                        Caelum - Ensino e Inovação
-                    </S.CompanyOccupation>
-                    <S.CompanyTime>Out 2015</S.CompanyTime>
-                </S.Experience>
-                <S.Experience>
-                    <S.Company>Project management</S.Company>
-                    <S.CompanyOccupation>
-                        FGV - Fundação Getulio Vargas
-                    </S.CompanyOccupation>
-                    <S.CompanyTime>Jun 2013</S.CompanyTime>
-                </S.Experience>
-            </S.Experiences>
-
-            <S.SubTitle>Contact</S.SubTitle>
-
-            <S.Experiences>
-                <S.Experience>
-                    <S.Company>E-mail</S.Company>
-                    <S.CompanyOccupation>
-                        edermunhozsantos@gmail.com
-                    </S.CompanyOccupation>
-                </S.Experience>
-                <S.Experience>
-                    <S.Company>Tel</S.Company>
-                    <S.CompanyOccupation>55 14 997-013-345</S.CompanyOccupation>
-                </S.Experience>
-                <S.Experience>
-                    <S.Company>Blog</S.Company>
-                    <S.CompanyOccupation>
-                        https://edermunhozsantos.netlify.app/
-                    </S.CompanyOccupation>
-                </S.Experience>
-            </S.Experiences> */}
+                </S.LatestProjectWrapper>
+            </S.SideProjects>
         </>
     )
 }
