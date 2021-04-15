@@ -8,7 +8,18 @@ import React from 'react'
 
 // import * as S from '../components/ListWrapper/styled'
 import { Profile } from '../components/Profile'
+import {
+    Github,
+    LinkedinSquare,
+    Google,
+    Blogger,
+    StackOverflow,
+} from 'styled-icons/boxicons-logos'
+import { Phone } from 'styled-icons/boxicons-regular'
 import styled from 'styled-components'
+
+const getAge = birthDate =>
+    Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e10)
 
 export const S = {
     Title: styled.h1`
@@ -21,10 +32,23 @@ export const S = {
         font-weight: bold;
         line-height: 48px;
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     `,
     Email: styled.div`
         font-size: 20px;
+    `,
+    AboutMe: styled.div`
+        margin-bottom: 40px;
+    `,
+    AboutMeAge: styled.div`
+        font-size: 18px;
+    `,
+    MoreAboutMe: styled.div`
+        margin-bottom: 40px;
+    `,
+    MoreAboutMeDescription: styled.p`
+        font-size: 18px;
+        margin-bottom: 16px;
     `,
     Occupation: styled.h2`
         font-size: 20px;
@@ -35,6 +59,11 @@ export const S = {
     Experience: styled.div`
         line-height: 32px;
         margin-bottom: 30px;
+    `,
+    DescriptionJobs: styled.ul`
+        font-size: 18px;
+        list-style: disc;
+        padding-left: 20px;
     `,
     Company: styled.div`
         font-size: 24px;
@@ -59,21 +88,55 @@ export const S = {
         align-items: center;
     `,
     DateTime: styled.div`
-        font-size: 16px;
+        font-size: 14px;
+        margin-bottom: -15px;
 
         + div {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
     `,
+    LatestProjectWrapper: styled.div``,
     LatestProject: styled.div`
         line-height: 42px;
+        margin-bottom: 40px;
+    `,
+    LatestProjectName: styled.div`
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: -10px;
+    `,
+    LatestProjectPreview: styled.div`
+        font-size: 18px;
+    `,
+    LatestProjectTechnologies: styled.div``,
+    Contact: styled.div`
+        margin-bottom: 60px;
+    `,
+    ContactDetail: styled.div`
+        font-size: 18px;
+    `,
+    Education: styled.section`
+        margin-bottom: 40px;
+    `,
+    EducationDate: styled.time`
+        font-size: 16px;
+    `,
+    EducationCourseName: styled.div`
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: -10px;
+    `,
+    EducationSchoolName: styled.div`
+        font-size: 18px;
+    `,
+    ComplementaryEducation: styled.section`
         margin-bottom: 40px;
     `,
     Timeline: styled.div`
         /* Styling */
         .timeline {
             position: relative;
-            margin: 70px 0;
+            margin-bottom: 60px;
         }
         .timeline:before {
             background-color: black;
@@ -155,6 +218,11 @@ const experiences = [
             'Unit test',
             'Integrations test',
         ],
+        description: [
+            'Helping built a new product from from statch.',
+            'Building a design system (components, design-tokens) using Figma, design pages',
+            'Working as front end lead in an application using continuous delivery and best practices',
+        ],
     },
     {
         company: 'Luizalabs',
@@ -173,6 +241,11 @@ const experiences = [
             'Unit test',
             'Integrations test',
         ],
+        description: [
+            'Working in a large-scale product that impact more than millions people',
+            'Working closely designers',
+            'Improved the existing software and implemented new ones',
+        ],
     },
     {
         company: 'Escale Digital',
@@ -190,6 +263,12 @@ const experiences = [
             'Unit test',
             'Integrations test',
         ],
+        description: [
+            'First front end of the team (Zelas Conecta)',
+            'Working closely designers',
+            'I had the chance to define front end architectures for large projects',
+            'I had the chance to help build a design system from scratch',
+        ],
     },
     {
         company: 'UOL - Universo Online',
@@ -202,6 +281,11 @@ const experiences = [
             'Design System',
             'NodeJs',
             'Unit test',
+        ],
+        description: [
+            'Working in a large-scale product that impact more than millions people',
+            'Working closely designers',
+            'Improved the existing software and implemented new ones',
         ],
     },
     {
@@ -219,18 +303,31 @@ const experiences = [
             'CSS',
             'Wordpress',
         ],
+        description: [
+            'First front end of the team o/',
+            'I helped build products in large-scale',
+            'Working closely designers',
+        ],
     },
     {
         company: 'G&P',
         occupation: 'Web designer',
         time: 'Out 2014 - Ago 2015',
         technologies: ['Angular', 'SCSS', 'Vanilla JS', 'CSS'],
+        description: [
+            'Helped build interfaces for government software',
+            'Design navigable prototypes',
+        ],
     },
     {
         company: 'MStech',
         occupation: 'Web designer',
         time: 'May 2013 - Out 2014',
         technologies: ['HTML', 'CSS', 'Vanilla JS', 'Photoshop'],
+        description: [
+            'Front end of online classes application',
+            'Design coverbooks, magazines, web layouts, book layout',
+        ],
     },
     {
         company: 'Solidum Editora',
@@ -244,6 +341,9 @@ const experiences = [
             'HTML',
             'CSS',
         ],
+        description: [
+            'Design coverbooks, mockups, magazines, web layouts, book layout',
+        ],
     },
 ]
 
@@ -254,6 +354,8 @@ const sideProjects = [
         link: {
             github: 'https://github.com/emunhoz/spotifood',
             production: 'https://spotifood-ten.vercel.app/#/',
+            figma:
+                'https://www.figma.com/file/OIo3gx7ydjfIOC6oSI9A0a/Spotifood?node-id=0%3A1',
         },
         technologies: [
             'React',
@@ -337,17 +439,174 @@ const sideProjects = [
 const Resume = () => {
     return (
         <>
-            <S.Title>Eder Munhoz dos Santos </S.Title>
-            <S.Occupation>
-                UI Engineer - edermunhozsantos@gmail.com
-            </S.Occupation>
+            <S.AboutMe>
+                <S.Title>Eder Munhoz dos Santos </S.Title>
+                <S.Occupation>UI Engineer</S.Occupation>
+            </S.AboutMe>
+
+            <S.Contact>
+                <S.ContactDetail>
+                    <Google size='20' /> edermunhozsantos@gmail.com
+                </S.ContactDetail>
+                <S.ContactDetail>
+                    <Phone size='20' /> +55 (14) 99701-3345
+                </S.ContactDetail>
+                <S.ContactDetail>
+                    <LinkedinSquare size='20' />{' '}
+                    <a href='https://www.linkedin.com/in/eder-munhoz-dos-santos-52965b66'>
+                        https://www.linkedin.com/in/eder-munhoz-dos-santos-52965b66
+                    </a>
+                </S.ContactDetail>
+                <S.ContactDetail>
+                    <Github size='20' />{' '}
+                    <a href='https://github.com/emunhoz'>
+                        https://github.com/emunhoz
+                    </a>
+                </S.ContactDetail>
+                <S.ContactDetail>
+                    <Blogger size='20' />{' '}
+                    <a href='https://edermunhozsantos.netlify.app/'>
+                        https://edermunhozsantos.netlify.app/
+                    </a>
+                </S.ContactDetail>
+                <S.ContactDetail>
+                    <StackOverflow size='20' />{' '}
+                    <a href='https://stackoverflow.com/users/10135827/eder'>
+                        https://stackoverflow.com/users/10135827/eder
+                    </a>
+                </S.ContactDetail>
+            </S.Contact>
+
+            <S.MoreAboutMe>
+                <S.SubTitle>A little bit about me</S.SubTitle>
+                <S.MoreAboutMeDescription>
+                    Brazilian, {getAge('1991-09-23')} years. I've degree in
+                    Marketing (2010-2012) and I like use UI (User interface)
+                    Engineer, cause I've experience in the both areas.
+                </S.MoreAboutMeDescription>
+                <S.MoreAboutMeDescription>
+                    I like to work closely with designers cause I believe that
+                    this experience of getting to know a little of both areas
+                    can have a more agile impact on product development.
+                </S.MoreAboutMeDescription>
+                <S.MoreAboutMeDescription>
+                    In the last times I've been working in a new products from
+                    statch, using some interface editor (Figma, AdobeXD) to
+                    setup all components, design-tokens and pages. Check this
+                    out{' '}
+                    <a href='https://www.behance.net/edermunhoz1384'>
+                        my personal portifolio
+                    </a>
+                    .
+                </S.MoreAboutMeDescription>
+                <S.MoreAboutMeDescription>
+                    Then, I start build the front end application using the best
+                    of technologies for the product context. Check this out{' '}
+                    <a href='#last-side-projects'>
+                        my last side projects as Front end engineer
+                    </a>
+                    .
+                </S.MoreAboutMeDescription>
+                <S.MoreAboutMeDescription>
+                    Main technologies that I have used for front end
+                    applications:
+                    <S.PostItemTag>React</S.PostItemTag>
+                    <S.PostItemTag>NodeJs</S.PostItemTag>
+                    <S.PostItemTag>styled-components</S.PostItemTag>
+                    <S.PostItemTag>Design System</S.PostItemTag>
+                    <S.PostItemTag>Monorepo</S.PostItemTag>
+                    <S.PostItemTag>NextJs</S.PostItemTag>
+                    <S.PostItemTag>AWS</S.PostItemTag>
+                    <S.PostItemTag>Google Cloud</S.PostItemTag>
+                    <S.PostItemTag>Vercel</S.PostItemTag>
+                    <S.PostItemTag>GraphQL</S.PostItemTag>
+                    <S.PostItemTag>Jest</S.PostItemTag>
+                    <S.PostItemTag>Testing library</S.PostItemTag>
+                    <S.PostItemTag>Cypress</S.PostItemTag>
+                    <S.PostItemTag>
+                        BFF with NodeJs (for micro-services)
+                    </S.PostItemTag>
+                    <S.PostItemTag>Micro-frontends</S.PostItemTag>
+                </S.MoreAboutMeDescription>
+            </S.MoreAboutMe>
+
+            <S.Education>
+                <S.SubTitle>Educations</S.SubTitle>
+                <div>
+                    <S.EducationDate>Jan 2010 - Jan 2012</S.EducationDate>
+                    <S.EducationCourseName>
+                        Degree in Marketing
+                    </S.EducationCourseName>
+                    <S.EducationSchoolName>
+                        IESB PREVE - Bauru, São Paulo - Brazil
+                    </S.EducationSchoolName>
+                </div>
+                <div>
+                    <S.EducationDate>Out 2015</S.EducationDate>
+                    <S.EducationCourseName>
+                        Front end web apps
+                    </S.EducationCourseName>
+                    <S.EducationSchoolName>
+                        Caelum - Ensino e Inovação
+                    </S.EducationSchoolName>
+                </div>
+                <div>
+                    <S.EducationDate>Jun 2013</S.EducationDate>
+                    <S.EducationCourseName>
+                        Project management
+                    </S.EducationCourseName>
+                    <S.EducationSchoolName>
+                        FGV - Fundação Getulio Vargas
+                    </S.EducationSchoolName>
+                </div>
+            </S.Education>
+
+            <S.ComplementaryEducation>
+                <S.SubTitle>Complementary courses:</S.SubTitle>
+                <div>
+                    <S.EducationDate>2021 - Present</S.EducationDate>
+                    <S.EducationCourseName>
+                        English Classes
+                    </S.EducationCourseName>
+                    <S.EducationSchoolName>Cambly</S.EducationSchoolName>
+                </div>
+                <div>
+                    <S.EducationDate>2020</S.EducationDate>
+                    <S.EducationCourseName>
+                        NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID
+                    </S.EducationCourseName>
+                    <S.EducationSchoolName>
+                        https://www.udemy.com/course/tdd-com-mango/
+                    </S.EducationSchoolName>
+                    <S.EducationSchoolName>Udemy</S.EducationSchoolName>
+                </div>
+                <div>
+                    <S.EducationDate>2019</S.EducationDate>
+                    <S.EducationCourseName>
+                        JS com TDD na Prática
+                    </S.EducationCourseName>
+                    <S.EducationSchoolName>
+                        https://www.udemy.com/course/js-com-tdd-na-pratica/
+                    </S.EducationSchoolName>
+                    <S.EducationSchoolName>Udemy</S.EducationSchoolName>
+                </div>
+            </S.ComplementaryEducation>
 
             <S.SubTitle>Experiences</S.SubTitle>
 
             <S.Timeline>
                 <ul className='timeline'>
                     {experiences.map(
-                        ({ company, occupation, time, technologies }, key) => (
+                        (
+                            {
+                                company,
+                                occupation,
+                                time,
+                                technologies,
+                                description,
+                            },
+                            key
+                        ) => (
                             <li className='timeline-event' key={key}>
                                 <label className='timeline-event-icon'></label>
                                 <div className='timeline-event-copy'>
@@ -358,13 +617,18 @@ const Resume = () => {
                                     <S.CompanyOccupation>
                                         {occupation}
                                     </S.CompanyOccupation>
-                                    <div>
+                                    <div style={{ marginBottom: '20px' }}>
                                         {technologies.map((item, key) => (
                                             <S.PostItemTag key={key}>
                                                 {item}
                                             </S.PostItemTag>
                                         ))}
                                     </div>
+                                    <S.DescriptionJobs>
+                                        {description.map((item, key) => (
+                                            <li key={key}>{item}</li>
+                                        ))}
+                                    </S.DescriptionJobs>
                                 </div>
                             </li>
                         )
@@ -372,29 +636,35 @@ const Resume = () => {
                 </ul>
             </S.Timeline>
 
-            <S.SubTitle>Last side projects</S.SubTitle>
+            <S.SubTitle id='last-side-projects'>Last side projects</S.SubTitle>
 
-            <div>
+            <S.LatestProjectWrapper>
                 {sideProjects.map(({ name, year, link, technologies }, key) => (
                     <S.LatestProject key={key}>
                         <S.DateTime>{year}</S.DateTime>
-                        <S.Company>{name}</S.Company>
-                        <S.CompanyOccupation>
+                        <S.LatestProjectName>{name}</S.LatestProjectName>
+                        <S.LatestProjectPreview>
                             Preview:{' '}
                             <a href={link.production}>{link.production}</a>
-                        </S.CompanyOccupation>
-                        <S.CompanyOccupation>
+                        </S.LatestProjectPreview>
+                        {link.figma && (
+                            <S.LatestProjectPreview>
+                                Figma interface:{' '}
+                                <a href={link.figma}>{link.figma}</a>
+                            </S.LatestProjectPreview>
+                        )}
+                        <S.LatestProjectPreview>
                             Github source:{' '}
                             <a href={link.github}>{link.github}</a>
-                        </S.CompanyOccupation>
-                        <div>
+                        </S.LatestProjectPreview>
+                        <S.LatestProjectTechnologies>
                             {technologies.map((item, key) => (
                                 <S.PostItemTag key={key}>{item}</S.PostItemTag>
                             ))}
-                        </div>
+                        </S.LatestProjectTechnologies>
                     </S.LatestProject>
                 ))}
-            </div>
+            </S.LatestProjectWrapper>
 
             {/* <S.SubTitle>Education and certifications</S.SubTitle>
 

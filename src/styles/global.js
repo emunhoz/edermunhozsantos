@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;    
   }
   ol, ul {
     list-style: none;
