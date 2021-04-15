@@ -14,12 +14,18 @@ import {
     Google,
     Blogger,
     StackOverflow,
+    Behance,
 } from 'styled-icons/boxicons-logos'
 import { Phone } from 'styled-icons/boxicons-regular'
 import styled from 'styled-components'
 
 const getAge = birthDate =>
     Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e10)
+
+function randomColor () {
+    const hex = ((Math.random() * 0xffffff) << 0).toString(16)
+    return `#${hex}`
+}
 
 export const S = {
     Title: styled.h1`
@@ -55,7 +61,9 @@ export const S = {
         margin: 0;
         margin-bottom: 40px;
     `,
-    Experiences: styled.section``,
+    Experiences: styled.section`
+        page-break-before: always;
+    `,
     Experience: styled.div`
         line-height: 32px;
         margin-bottom: 30px;
@@ -86,6 +94,11 @@ export const S = {
         margin: 0.2rem;
         border-radius: 1.2rem;
         align-items: center;
+
+        @media print {
+            background-color: var(--bg-light) !important;
+            -webkit-print-color-adjust: exact;
+        }
     `,
     DateTime: styled.div`
         font-size: 14px;
@@ -99,6 +112,7 @@ export const S = {
     LatestProject: styled.div`
         line-height: 42px;
         margin-bottom: 40px;
+        break-inside: avoid;
     `,
     LatestProjectName: styled.div`
         font-size: 24px;
@@ -110,12 +124,13 @@ export const S = {
     `,
     LatestProjectTechnologies: styled.div``,
     Contact: styled.section`
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     `,
     ContactDetail: styled.div`
         font-size: 18px;
     `,
     Education: styled.section`
+        page-break-before: always;
         margin-bottom: 40px;
     `,
     EducationDate: styled.time`
@@ -130,13 +145,19 @@ export const S = {
         font-size: 18px;
     `,
     ComplementaryEducation: styled.section`
+        page-break-before: always;
         margin-bottom: 40px;
     `,
     WorkExpirence: styled.section`
+        break-inside: avoid;
         margin-bottom: 40px;
     `,
     SideProjects: styled.section`
+        page-break-before: always;
         margin-bottom: 40px;
+    `,
+    WrapperPagePrint: styled.div`
+        page-break-before: always;
     `,
     Languages: styled.section`
         margin-bottom: 40px;
@@ -165,6 +186,7 @@ export const S = {
         .timeline-event-copy {
             padding: 1em;
             position: relative;
+            break-inside: avoid;
         }
         .timeline-event-copy h3 {
             font-size: 1.75em;
@@ -214,6 +236,7 @@ const experiences = [
         company: 'Zmes',
         occupation: 'UI Engineer',
         time: 'Dec 2020 - Present',
+        label_color: randomColor(),
         technologies: [
             'React',
             'styled-components',
@@ -287,6 +310,7 @@ const experiences = [
             'Angular',
             'React',
             'SCSS',
+            'BFF with NodeJs',
             'Design System',
             'NodeJs',
             'Unit test',
@@ -303,6 +327,7 @@ const experiences = [
         time: 'Sep 2015 - Jun 2018',
         technologies: [
             'VueJs',
+            'React',
             'Ruby on Rails',
             'SCSS',
             'Design System',
@@ -325,7 +350,7 @@ const experiences = [
         technologies: ['Angular', 'SCSS', 'Vanilla JS', 'CSS'],
         description: [
             'Helped build interfaces for government software',
-            'Design navigable prototypes',
+            'Interfaces for websites, HTML and CSS using W3C standards, wireframe, navigable prototypes, user experience / interface improvements',
         ],
     },
     {
@@ -334,7 +359,7 @@ const experiences = [
         time: 'May 2013 - Out 2014',
         technologies: ['HTML', 'CSS', 'Vanilla JS', 'Photoshop'],
         description: [
-            'Front end of online classes application',
+            'Front end apps for online classes',
             'Design coverbooks, magazines, web layouts, book layout',
         ],
     },
@@ -351,7 +376,7 @@ const experiences = [
             'CSS',
         ],
         description: [
-            'Design coverbooks, mockups, magazines, web layouts, book layout',
+            'Covers books, magazines, newspapers, layout, folders, visual identities, e-mail marketing, vectorizations and others graphic works.',
         ],
     },
 ]
@@ -455,33 +480,41 @@ const Resume = () => {
 
             <S.Contact>
                 <S.ContactDetail>
-                    <Google size='20' /> edermunhozsantos@gmail.com
+                    <Google size='20' />{' '}
+                    <a href='mailto:edermunhozsantos@gmail.com'>
+                        edermunhozsantos@gmail.com
+                    </a>
                 </S.ContactDetail>
                 <S.ContactDetail>
-                    <Phone size='20' /> +55 (14) 99701-3345
+                    <Phone size='20' />{' '}
+                    <a href='tel:+5514997013345'> +55 (14) 99701-3345</a>
                 </S.ContactDetail>
                 <S.ContactDetail>
                     <LinkedinSquare size='20' />{' '}
                     <a href='https://www.linkedin.com/in/eder-munhoz-dos-santos-52965b66'>
-                        https://www.linkedin.com/in/eder-munhoz-dos-santos-52965b66
+                        Linkedin
                     </a>
                 </S.ContactDetail>
                 <S.ContactDetail>
                     <Github size='20' />{' '}
-                    <a href='https://github.com/emunhoz'>
-                        https://github.com/emunhoz
-                    </a>
+                    <a href='https://github.com/emunhoz'>Github</a>
                 </S.ContactDetail>
                 <S.ContactDetail>
                     <Blogger size='20' />{' '}
                     <a href='https://edermunhozsantos.netlify.app/'>
-                        https://edermunhozsantos.netlify.app/
+                        Personal blog
                     </a>
                 </S.ContactDetail>
                 <S.ContactDetail>
                     <StackOverflow size='20' />{' '}
                     <a href='https://stackoverflow.com/users/10135827/eder'>
-                        https://stackoverflow.com/users/10135827/eder
+                        StackOverflow
+                    </a>
+                </S.ContactDetail>
+                <S.ContactDetail>
+                    <Behance size='20' />{' '}
+                    <a href='https://www.behance.net/edermunhoz1384'>
+                        Portifolio
                     </a>
                 </S.ContactDetail>
             </S.Contact>
@@ -531,9 +564,7 @@ const Resume = () => {
                     <S.PostItemTag>Jest</S.PostItemTag>
                     <S.PostItemTag>Testing library</S.PostItemTag>
                     <S.PostItemTag>Cypress</S.PostItemTag>
-                    <S.PostItemTag>
-                        BFF with NodeJs (for micro-services)
-                    </S.PostItemTag>
+                    <S.PostItemTag>BFF with NodeJs</S.PostItemTag>
                     <S.PostItemTag>Micro-frontends</S.PostItemTag>
                 </S.MoreAboutMeDescription>
             </S.MoreAboutMe>
@@ -672,20 +703,17 @@ const Resume = () => {
                                     {name}
                                 </S.LatestProjectName>
                                 <S.LatestProjectPreview>
-                                    Preview:{' '}
-                                    <a href={link.production}>
-                                        {link.production}
-                                    </a>
+                                    Preview: <a href={link.production}>Live</a>
                                 </S.LatestProjectPreview>
                                 {link.figma && (
                                     <S.LatestProjectPreview>
                                         Figma interface:{' '}
-                                        <a href={link.figma}>{link.figma}</a>
+                                        <a href={link.figma}>interface</a>
                                     </S.LatestProjectPreview>
                                 )}
                                 <S.LatestProjectPreview>
                                     Github source:{' '}
-                                    <a href={link.github}>{link.github}</a>
+                                    <a href={link.github}>Code</a>
                                 </S.LatestProjectPreview>
                                 <S.LatestProjectTechnologies>
                                     {technologies.map((item, key) => (
