@@ -274,7 +274,7 @@ const experiences = [
             'Integrations test',
         ],
         description: [
-            'Working in a large-scale product that impact more than millions people',
+            'Translate mock-ups into fully functioning complex products',
             'Working closely designers',
             'Improved the existing software and implemented new ones',
         ],
@@ -300,7 +300,7 @@ const experiences = [
             'First front end of the team (Zelas Conecta)',
             'Working closely designers',
             'I had the chance to define front end architectures for large projects',
-            'I had the chance to help build a design system from scratch',
+            'I had the chance to build a design system from scratch',
         ],
     },
     {
@@ -340,7 +340,7 @@ const experiences = [
         ],
         description: [
             'First front end of the team o/',
-            'I helped build products in large-scale',
+            'Translate mock-ups into fully functioning complex products',
             'Working closely designers',
         ],
     },
