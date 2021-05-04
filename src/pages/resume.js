@@ -608,7 +608,9 @@ const Resume = () => {
                 </div>
                 <div>
                     <S.EducationCourseName>English</S.EducationCourseName>
-                    <S.EducationSchoolName>Intermediary</S.EducationSchoolName>
+                    <S.EducationSchoolName>
+                        Intermediate (English spoken (B1))
+                    </S.EducationSchoolName>
                 </div>
             </S.Languages>
 
