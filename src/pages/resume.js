@@ -529,7 +529,7 @@ const Resume = () => {
         <>
             <S.AboutMe>
                 <S.Title>Eder Munhoz dos Santos </S.Title>
-                <S.Occupation>Software Engineer</S.Occupation>
+                <S.Occupation>Software Engineer (UI Engineer)</S.Occupation>
             </S.AboutMe>
 
             <S.Contact>
@@ -576,7 +576,7 @@ const Resume = () => {
             <S.MoreAboutMe>
                 <S.SubTitle>A bit about me</S.SubTitle>
                 <S.MoreAboutMeDescription>
-                    Brazilian, {getAge('1991-09-23')} years. I have a degree in Marketing (2010-2012) and experience in both areas (Designer and Front end and now a bit of Backend as well).
+                    Brazilian, {getAge('1991-09-23')} years. I have a degree in Marketing (2010-2012) and experience as designer, Front end and now a bit of Backend as well.
                 </S.MoreAboutMeDescription>
                 <S.MoreAboutMeDescription>
                   I like to work closely with designers because I believe that this experience of getting to know a little about both areas can have a more agile impact on product development.
