@@ -419,6 +419,24 @@ const experiences = [
 
 const sideProjects = [
     {
+        name: 'Monorepo Fullstack Boilerplate',
+        year: '2021',
+        link: {
+            github: 'https://github.com/emunhoz/monorepo-boilerplate',
+            production: 'https://monorepo-boilerplate-web.vercel.app/',
+        },
+        technologies: [
+            'React',
+            'styled-components',
+            'Monorepo',
+            'Lerna',
+            'Vercel CI/CD',
+            'NodeJS',
+            'Unit test',
+            'Integrations test',
+        ],
+    },
+    {
         name: 'Spotifood - Food with music',
         year: '2021',
         link: {
@@ -511,7 +529,7 @@ const Resume = () => {
         <>
             <S.AboutMe>
                 <S.Title>Eder Munhoz dos Santos </S.Title>
-                <S.Occupation>UI Engineer</S.Occupation>
+                <S.Occupation>Software Engineer</S.Occupation>
             </S.AboutMe>
 
             <S.Contact>
@@ -556,9 +574,9 @@ const Resume = () => {
             </S.Contact>
 
             <S.MoreAboutMe>
-                <S.SubTitle>A little bit about me</S.SubTitle>
+                <S.SubTitle>A bit about me</S.SubTitle>
                 <S.MoreAboutMeDescription>
-                    Brazilian, {getAge('1991-09-23')} years. I have a degree in Marketing (2010-2012) and I have experience in both areas (Designer and Front end).
+                    Brazilian, {getAge('1991-09-23')} years. I have a degree in Marketing (2010-2012) and experience in both areas (Designer and Front end and now a bit of Backend as well).
                 </S.MoreAboutMeDescription>
                 <S.MoreAboutMeDescription>
                   I like to work closely with designers because I believe that this experience of getting to know a little about both areas can have a more agile impact on product development.
@@ -580,6 +598,11 @@ const Resume = () => {
                 <S.MoreAboutMeDescription>
                     Main technologies I use for front-end applications:
                     <S.PostItemTag>React</S.PostItemTag>
+                    <S.PostItemTag>Vue</S.PostItemTag>
+                    <S.PostItemTag>GraphQL</S.PostItemTag>
+                    <S.PostItemTag>Apollo</S.PostItemTag>
+                    <S.PostItemTag>PostgreSQL</S.PostItemTag>
+                    <S.PostItemTag>Prisma</S.PostItemTag>
                     <S.PostItemTag>NodeJs</S.PostItemTag>
                     <S.PostItemTag>styled-components</S.PostItemTag>
                     <S.PostItemTag>Design System</S.PostItemTag>
@@ -588,7 +611,6 @@ const Resume = () => {
                     <S.PostItemTag>AWS</S.PostItemTag>
                     <S.PostItemTag>Google Cloud</S.PostItemTag>
                     <S.PostItemTag>Vercel</S.PostItemTag>
-                    <S.PostItemTag>GraphQL</S.PostItemTag>
                     <S.PostItemTag>Jest</S.PostItemTag>
                     <S.PostItemTag>Testing library</S.PostItemTag>
                     <S.PostItemTag>Cypress</S.PostItemTag>
@@ -598,7 +620,7 @@ const Resume = () => {
             </S.MoreAboutMe>
 
             <S.Education>
-                <S.SubTitle>Educations</S.SubTitle>
+                <S.SubTitle>Education</S.SubTitle>
                 <div>
                     <S.EducationDate>Jan 2010 - Jan 2012</S.EducationDate>
                     <S.EducationCourseName>
@@ -647,7 +669,7 @@ const Resume = () => {
             <S.ComplementaryEducation>
                 <S.SubTitle>Complementary courses</S.SubTitle>
                 <div>
-                    <S.EducationDate>2021 - Present</S.EducationDate>
+                    <S.EducationDate>2021 - 2022</S.EducationDate>
                     <S.EducationCourseName>
                         English Classes
                     </S.EducationCourseName>
