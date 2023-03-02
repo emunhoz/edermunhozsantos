@@ -1,13 +1,4 @@
 import React from 'react'
-// import { graphql } from 'gatsby'
-// import SEO from '../components/seo'
-// import PostItem from '../components/PostItem'
-// import TitlePage from '../components/TitlePage'
-// import LocalizedLink from '../components/LocalizedLink'
-// import useTranslations from '../components/useTranslations'
-
-// import * as S from '../components/ListWrapper/styled'
-import { Profile } from '../components/Profile'
 import {
     Github,
     LinkedinSquare,
@@ -232,9 +223,53 @@ export const S = {
 }
 
 const experiences = [
+      {
+        company: 'Momentive.ai (SurveyMonkey)',
+        occupation: 'Software Engineer',
+        time: 'Sep 2022 - Present',
+        label_color: randomColor(),
+        technologies: [
+            'React',
+            'styled-components',
+            'Typescript',
+            'Design System',
+            'Turborepo',
+            'Yarn workspaces',
+            'Vercel CI/CD',
+            'BFF',
+            'Unit test',
+            'Integrations test',
+            'E2E tests'
+        ],
+        description: [
+            'Currently work on the CRM team for the GetFeedback platform. My day-to-day involves building out web experiences for automations and integrations layer',
+        ],
+    },
+      {
+        company: 'FoxBox Digital',
+        occupation: 'Software Engineer',
+        time: 'Aug 2021 - Apr 2022',
+        label_color: randomColor(),
+        technologies: [
+            'React',
+            'styled-components',
+            'Typescript',
+            'Design System',
+            'Turborepo',
+            'Yarn workspaces',
+            'Vercel CI/CD',
+            'BFF',
+            'Unit test',
+            'Integrations test',
+            'E2E tests'
+        ],
+        description: [
+            'As the first front end of the team, I was responsible for building new digital product from scratch. Responsible for configuring all parts of CI and CD. Translate mock-ups into fully functioning complex products. Hoodie is an analytics solution for the cannabis industry.',
+        ],
+    },
     {
         company: 'Zmes',
-        occupation: 'UI Engineer',
+        occupation: 'Senior Software Engineer',
         time: 'Dec 2020 - Present',
         label_color: randomColor(),
         technologies: [
@@ -488,7 +523,7 @@ const Resume = () => {
                 </S.ContactDetail>
                 <S.ContactDetail>
                     <Phone size='20' />{' '}
-                    <a href='tel:+5514997013345'> +55 (14) 99701-3345</a>
+                    <a href='tel:+31685319197'> +31 6 85 31 91 97</a>
                 </S.ContactDetail>
                 <S.ContactDetail>
                     <LinkedinSquare size='20' />{' '}
@@ -523,27 +558,20 @@ const Resume = () => {
             <S.MoreAboutMe>
                 <S.SubTitle>A little bit about me</S.SubTitle>
                 <S.MoreAboutMeDescription>
-                    Brazilian, {getAge('1991-09-23')} years. I've degree in
-                    Marketing (2010-2012) and I like use UI (User interface)
-                    Engineer, cause I've experience in the both areas.
+                    Brazilian, {getAge('1991-09-23')} years. I have a degree in Marketing (2010-2012) and I have experience in both areas (Designer and Front end).
                 </S.MoreAboutMeDescription>
                 <S.MoreAboutMeDescription>
-                    I like to work closely with designers cause I believe that
-                    this experience of getting to know a little of both areas
-                    can have a more agile impact on product development.
+                  I like to work closely with designers because I believe that this experience of getting to know a little about both areas can have a more agile impact on product development.
                 </S.MoreAboutMeDescription>
                 <S.MoreAboutMeDescription>
-                    In the last times I've been working in a new products from
-                    statch, using some interface editor (Figma, AdobeXD) to
-                    setup all components, design-tokens and pages. Check out{' '}
+                  In the last couple of years, I've been working on new products from scratch, using some interface editors (Figma, AdobeXD) to set up all components, design tokens, and pages. Check out my portfolio: {' '}
                     <a href='https://www.behance.net/edermunhoz1384'>
                         my personal portifolio
                     </a>
                     .
                 </S.MoreAboutMeDescription>
                 <S.MoreAboutMeDescription>
-                    Then, I start building the front end application using the
-                    best of technologies for the product context. Check out{' '}
+                    Then, I started building the front-end application using the best technologies for the product context. Check out my last side projects as a Front end engineer:{' '}
                     <a href='#last-side-projects'>
                         my last side projects as Front end engineer
                     </a>
@@ -609,7 +637,9 @@ const Resume = () => {
                 <div>
                     <S.EducationCourseName>English</S.EducationCourseName>
                     <S.EducationSchoolName>
-                        Intermediate (English spoken (B1))
+                      <a href='https://www.efset.org/cert/NzQz78'>
+                        EFSET English Certificate 58/100 (B2 Upper Intermediate)
+                      </a>
                     </S.EducationSchoolName>
                 </div>
             </S.Languages>
